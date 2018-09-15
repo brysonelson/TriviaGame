@@ -1,0 +1,141 @@
+/**{
+    border: solid red 2px;
+}*/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url("../images/background-img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#game-play-area {
+    background: #5f5e5eb4;
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+    padding-bottom: 5%;
+    border-radius: 12px;
+        
+}
+
+#hp-logo {
+    width: 100%;
+    padding-top: 20%;
+    margin: auto;
+}
+
+#start-btn-div {
+    padding-top: 10%;
+}
+
+#question-one {
+    display: none;
+}
+
+#question-one-win {
+    display: none;
+}
+
+#question-one-lose {
+    display: none;
+}
+
+#question-two {
+    display: none;
+}
+
+#question-two-win {
+    display: none;
+}
+
+#question-two-lose {
+    display: none;
+}
+
+#question-three {
+    display: none;
+}
+
+#question-three-win {
+    display: none;
+}
+
+#question-three-lose {
+    display: none;
+}
+
+#question-four {
+    display: none;
+}
+
+#question-four-win {
+    display: none;
+}
+
+#question-four-lose {
+    display: none;
+}
+
+#question-five {
+    display: none;
+}
+
+#question-five-win {
+    display: none;
+}
+
+#question-five-lose {
+    display: none;
+}
+
+#question-six {
+    display: none;
+}
+
+#question-six-win {
+    display: none;
+}
+
+#question-six-lose {
+    display: none;
+}
+
+#question-seven {
+    display: none;
+}
+
+#question-seven-win {
+    display: none;
+}
+
+#question-seven-lose {
+    display: none;
+}
+
+#question-eight {
+    display: none;
+}
+
+#question-eight-win {
+    display: none;
+}
+
+#question-eight-lose {
+    display: none;
+}
+
+#end-screen {
+    display: none;
+}
+
+.win-lose-screen {
+    width: 100%;
+    margin: auto;
+    
+}
