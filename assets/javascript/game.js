@@ -5,7 +5,23 @@ $(document).ready(function() {
     var wrongAnswers = 0;
     var rightAnswers = 0;
 
+//============================ RIGHT/WRONG FUNCTION ===============================
 
+function rightGuess() {
+    //increment the number of correct answers
+    rightAnswers++;
+
+    //stop the timer
+    clearInterval(intervalId);
+}
+
+function wrongGuess() {
+    //incrememnt the number of wrong answers
+    wrongAnswers++;
+
+    //stop the timer
+    clearInterval(intervalId);
+}
     
 //============================ COUNT SECONDS ===============================
 
@@ -22,10 +38,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 1
+            $("#question-one").css("display", "none");
+
+            //show question 1 losing screen
+            $("#question-one-lose").css("display", "block");
+
+            //after 10 seconds, show question 2
+            var showNextQ = setTimeout(nextQuestion2, 1000 * 5);
         }
     }
 
@@ -40,10 +62,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 2
+            $("#question-two").css("display", "none");
+
+            //show question 2 losing screen
+            $("#question-two-lose").css("display", "block");
+
+            //after 10 seconds, show question 3
+            var showNextQ = setTimeout(nextQuestion3, 1000 * 5);
         }
     }
 
@@ -58,10 +86,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 3
+            $("#question-three").css("display", "none");
+
+            //show question 3 losing screen
+            $("#question-three-lose").css("display", "block");
+
+            //after 10 seconds, show question 4
+            var showNextQ = setTimeout(nextQuestion4, 1000 * 5);
         }
     }
 
@@ -76,10 +110,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 4
+            $("#question-four").css("display", "none");
+
+            //show question 4 losing screen
+            $("#question-four-lose").css("display", "block");
+
+            //after 10 seconds, show question 5
+            var showNextQ = setTimeout(nextQuestion5, 1000 * 5);
         }
     }
 
@@ -94,10 +134,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 5
+            $("#question-five").css("display", "none");
+
+            //show question 5 losing screen
+            $("#question-five-lose").css("display", "block");
+
+            //after 10 seconds, show question 6
+            var showNextQ = setTimeout(nextQuestion6, 1000 * 5);
         }
     }
 
@@ -111,10 +157,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 6
+            $("#question-six").css("display", "none");
+
+            //show question 6 losing screen
+            $("#question-six-lose").css("display", "block");
+
+            //after 10 seconds, show question 7
+            var showNextQ = setTimeout(nextQuestion7, 1000 * 5);
         }
     }
 
@@ -128,10 +180,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 7
+            $("#question-seven").css("display", "none");
+
+            //show question 7 losing screen
+            $("#question-seven-lose").css("display", "block");
+
+            //after 10 seconds, show question 8
+            var showNextQ = setTimeout(nextQuestion8, 1000 * 5);
         }
     }
 
@@ -145,10 +203,16 @@ $(document).ready(function() {
     
         //if the seconds reach 0, stop counting and player loses that question
         if (secondsLeft <= 0) {
-            clearInterval(intervalId);
+            wrongGuess();
 
-            //tell the user they're out of time.
-            alert("Out of time!");
+            //hide question 8
+            $("#question-eight").css("display", "none");
+
+            //show question 8 losing screen
+            $("#question-eight-lose").css("display", "block");
+
+            //after 10 seconds, show question 2
+            var showNextQ = setTimeout(endingScreen, 1000 * 5);
         }
     }
 
@@ -316,23 +380,7 @@ $(document).ready(function() {
         $("#final-loses").append(losesDiv);
     }
 
-//============================ RIGHT/WRONG FUNCTION ===============================
 
-    function rightGuess() {
-        //increment the number of correct answers
-        rightAnswers++;
-
-        //stop the timer
-        clearInterval(intervalId);
-    }
-
-    function wrongGuess() {
-        //incrememnt the number of wrong answers
-        wrongAnswers++;
-
-        //stop the timer
-        clearInterval(intervalId);
-    }
 
     //============================ CLICK EVENTS ===============================
 
